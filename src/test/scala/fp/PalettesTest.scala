@@ -9,7 +9,7 @@ final class PalettesTest extends WordSpecLike with MustMatchers {
     }
 
     "create singleton list" in {
-      palette(1) must be (List(List(matte(1)), List(gloss(1))))
+      palette(1) must be (List(solution(matte(1)), solution(gloss(1))))
     }
   }
 }
