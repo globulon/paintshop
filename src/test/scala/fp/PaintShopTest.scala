@@ -5,19 +5,19 @@ import org.scalatest.{MustMatchers, WordSpecLike}
 final class PaintShopTest extends WordSpecLike with MustMatchers with PaintShop {
   "process" should {
     "not find solution" in {
-      process(palette(1), impPrefs1) must be (None)
+      process(1, impPrefs1) must be (None)
     }
 
     "not find solution changing preference order" in {
-      process(palette(1), impPrefs2) must be (None)
+      process(1, impPrefs2) must be (None)
     }
 
     "find solution with 2 colours" in {
-      process(palette(2), twoPrefs) must be (Some(solution(matte(1), matte(2))))
+      process(2, twoPrefs) must be (Some(solution(matte(1), matte(2))))
     }
 
     "find solution with 5 colours" in {
-      process(palette(5), fivePrefs) must be (Some(solution(gloss(1), gloss(2), gloss(3), gloss(4), matte(5))))
+      process(5, fivePrefs) must be (Some(solution(gloss(1), gloss(2), gloss(3), gloss(4), matte(5))))
     }
   }
 
