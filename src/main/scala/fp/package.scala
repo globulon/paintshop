@@ -1,3 +1,4 @@
-package object fp extends
-  Palettes with Colours
-  with Validations with Solutions with Preferences with PaintShop with Merging
+package object fp
+  extends Palettes with Colours with Solutions with Preferences
+    with Validations with PaintShop with Merging
+    with Serialization
