@@ -48,12 +48,13 @@ scalacOptions ++= Seq(
   "-Ywarn-unused:patvars", // Warn if a variable bound in a pattern is unused.
   "-Ywarn-unused:privates", // Warn if a private member is unused.
   "-Ywarn-value-discard" // Warn when non-Unit expression results are unused.
-//  "-Xlint:strict-unsealed-patmat"
+  //  "-Xlint:strict-unsealed-patmat"
 )
 
 libraryDependencies ++= Seq(
+  "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.1" withSources(),
   "org.scalaz" %% "scalaz-core" % "7.2.26" withSources(),
-  "org.scalactic" %% "scalactic" % "3.0.5" withSources() ,
+  "org.scalactic" %% "scalactic" % "3.0.5" withSources(),
   "org.scalatest" %% "scalatest" % "3.0.5" % "test" withSources()
 )
 
