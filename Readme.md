@@ -1,4 +1,4 @@
-##Paintshop challenge
+## Paint shop challenge
 
 You run a paint shop, and there are a few different colors of paint you can prepare.  Each color can be either "gloss" or "matte".
 
