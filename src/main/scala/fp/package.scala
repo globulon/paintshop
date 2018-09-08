@@ -1,1 +1,1 @@
-package object fp extends Palettes with Colors
+package object fp extends Palettes with Colours with Validations with Solutions with Preferences
