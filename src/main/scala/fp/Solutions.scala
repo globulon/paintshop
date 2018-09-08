@@ -6,6 +6,10 @@ protected[fp] trait Solutions {
     case (solution, _)                                   ⇒ solution.sorted
   }
 
+  final def padd(n : Int): Solution ⇒ Solution = s ⇒ Range(1, n + 1).toSet.diff(s.colors.map(_.idx.value).toSet).foldLeft(s) {
+    case (sol, i) ⇒ add(sol, gloss(i))
+  }
+
   final def solution(c: Colour) = Solution(List(c))
 
   final def solution(c: Colour, c2: Colour, cs: Colour*) = Solution(c::c2::cs.toList)
