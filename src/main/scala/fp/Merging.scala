@@ -1,7 +1,7 @@
 package fp
 
 protected[fp] trait Merging {
-  final protected def merge(valid: Validate): List[Solution] ⇒ Preference ⇒ List[Solution] = sols ⇒ pref ⇒
+  final def merge(valid: Validate): Palette ⇒ Preference ⇒ Palette = sols ⇒ pref ⇒
     (for {
       solution    ← sols
       preferences ← pref.colors.permutations
