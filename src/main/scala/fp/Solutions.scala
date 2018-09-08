@@ -1,8 +1,9 @@
 package fp
 
 protected[fp] trait Solutions {
-  final def extend: Solution ⇒ Colour ⇒ Solution = {
-    case Solution(colours) ⇒ c ⇒ Solution((c::colours).distinct).sorted
+  final def add: (Solution, Colour) ⇒ Solution = {
+    case (Solution(colours), c)  if !colours.contains(c) ⇒ Solution(c::colours).sorted
+    case (solution, _)                                   ⇒ solution.sorted
   }
 
   final def solution(c: Colour) = Solution(List(c))

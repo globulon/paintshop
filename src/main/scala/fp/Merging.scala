@@ -5,5 +5,5 @@ protected[fp] trait Merging {
     (for {
       solution ← sols
       color ← pref.colors
-    } yield extend(solution)(color)).filter(valid).distinct
+    } yield add(solution, color)).filter(valid).distinct
 }
