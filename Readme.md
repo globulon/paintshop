@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/02d459eb9bdd45c4b388f0d6e4e7abe2)](https://www.codacy.com/app/globulon/paintshop?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=globulon/paintshop&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/globulon/paintshop.svg?branch=master)](https://travis-ci.org/globulon/paintshop)
 [![Coverage Status](https://coveralls.io/repos/github/globulon/paintshop/badge.svg?branch=master)](https://coveralls.io/github/globulon/paintshop?branch=master)
 
