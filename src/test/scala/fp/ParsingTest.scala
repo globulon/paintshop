@@ -2,7 +2,7 @@ package fp
 
 import org.scalatest.{MustMatchers, WordSpecLike}
 
-final class ParsingTest extends WordSpecLike with MustMatchers {
+final class ParsingTest extends WordSpecLike with MustMatchers with Parsing {
   "Parsing" should {
     "successfuly parse preference" in {
       parse(pref, "1 M").get must be (matte(1))

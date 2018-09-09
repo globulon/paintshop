@@ -15,6 +15,6 @@ protected[fp] trait Errors {
     case scala.util.Failure(ex)    ⇒ -\/(ApplicationError(ex.getMessage))
   }
 
-  final def fail[A](msg: String) = -\/(ApplicationError(msg))
+  final def fail[A](msg: String): SafeResult[A] = -\/(ApplicationError(msg))
 
 }
