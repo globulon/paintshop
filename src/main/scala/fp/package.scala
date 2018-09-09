@@ -1,4 +1,4 @@
 package object fp
   extends Palettes with Colours with Solutions with Preferences
     with Validations with PaintShop with Merging
-    with Serialization with Parsing
+    with Serialization with Errors with Serializers

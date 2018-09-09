@@ -13,7 +13,7 @@ case class Preference(colors: List[Colour])
 case class ColorIndex(value: Int)
 case class Colour(idx: ColorIndex, nuance: Nuance)
 
-trait PaintShop {
+protected[fp] trait PaintShop {
   final def process(colourNum: Int, input: Stream[Preference]): Option[Solution] =
     optimal(colourNum)(generate(palette(colourNum), input))
 

@@ -1,5 +1,6 @@
 package fp
 
+import scala.language.postfixOps
 import scala.util.parsing.combinator._
 
 protected[fp] trait Parsing extends RegexParsers {
