@@ -77,3 +77,35 @@ One more example.  The input:
 ...should produce
 
 `M M`
+
+
+## Run example
+
+Make sure you have installed 
+* jdk8+ [https://www.oracle.com/java/]
+* sbt 1.1.4+  [https://www.scala-sbt.org/]
+
+In order to run the provide examples in the sample directory, from the root project run the following commands
+from the project root directory
+
+```
+$ sbt -mem 2048 clean "run samples/richerExample.txt"
+```
+
+or
+
+```
+$ sbt -mem 2048 clean "run samples/2colours.txt"
+```
+
+or
+
+```
+$ sbt -mem 2048 clean "run samples/5colours.txt"
+```
+
+or 
+
+```
+$ sbt -mem 2048 clean "run samples/fail.txt"
+```
