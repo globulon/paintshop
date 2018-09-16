@@ -8,4 +8,14 @@ protected[fp] trait Colours {
 
   implicit def sortColour: Ordering[Colour] =
     (x: Colour, y: Colour) ⇒ implicitly[Ordering[Int]].compare(x.idx.value, y.idx.value)
+
+  implicit class RichColour(c: Colour) {
+    def invert: Colour = c match {
+      case Colour(idx, Matte) ⇒ Colour(idx, Gloss)
+      case Colour(idx, Gloss) ⇒ Colour(idx, Matte)
+    }
+
+    def gloss: Boolean = c.nuance == Gloss
+    def matte: Boolean = !gloss
+  }
 }

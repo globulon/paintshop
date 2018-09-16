@@ -12,7 +12,7 @@ protected[fp] trait Serialization {
 
 protected[fp] trait Serializers {
   implicit def serializeSolution: Serializer[Solution] = new Serializer[Solution] {
-    override def serialize: Solution ⇒ String = _.sorted.colors.map(_.nuance).map(_.toString.head).mkString(" ")
+    override def serialize: Solution ⇒ String = _.colors.toList.sorted.map(_.nuance).map(_.toString.head).mkString(" ")
   }
 
   implicit def serializeSafeResult[A : Serializer]: Serializer[SafeResult[A]] = new Serializer[SafeResult[A]] {

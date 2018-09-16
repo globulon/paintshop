@@ -20,7 +20,7 @@ protected[fp] trait Running extends Parsing {
   }
 
   private def stage: Stream[String] ⇒ Stream[Preference] =
-    _.map(parse(preferences, _)).filter(_.successful).map(_.get).map(Preference)
+    _.map(parse(preferences, _)).filter(_.successful).map(_.get).map(cs ⇒ Preference(cs.toSet))
 
   private def processFile(name: String): SafeResult[Solution] = fromFile(name) {
     case Stream.Empty ⇒ fail[Solution]("Empty file")
